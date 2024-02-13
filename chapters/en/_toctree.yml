@@ -62,6 +62,14 @@
       title: What you'll learn and what you'll build
     - local: Unit 4 - Multimodal Models/introduction
       title: Introduction
+  - sub-title: Vision Language Models
+    sections:
+    - local: Unit 4 - Multimodal Models/Vision Language Models/vlm-intro
+      title: Introduction to Vision Language Models
+    - local: Unit 4 - Multimodal Models/Vision Language Models/tasks-models-part1
+      title: Multimodal Tasks and Models
+    - local: Unit 4 - Multimodal Models/Vision Language Models/transfer_learning
+      title: Transfer learning
   - sub-title: CLIP and relatives
     sections:
     - local: Unit 4 - Multimodal Models/CLIP and relatives/losses
@@ -74,14 +82,10 @@
       title: Multimodal Text Generation (BLIP)
     - local: chapters/en/Unit 4 - Multimodal Models/CLIP and relatives/owl_vit
       title: Multimodal Object Detection (OWL-ViT)
-  - local: Unit 4 - Multimodal Models/vlm-intro
-    title: Introduction to Vision Language Models
-  - local: Unit 4 - Multimodal Models/tasks-models-part1
-    title: Multimodal Tasks and Models
-  - local: Unit 4 - Multimodal Models/transfer_learning
-    title: Transfer learning
-  - local: Unit 4 - Multimodal Models/supplementary-material
-    title: Supplemental reading and resources
+  - sub-title: Supplementary
+    sections:
+    - local: Unit 4 - Multimodal Models/Supplementary/supplementary-material
+      title: Supplemental reading and resources
 
 - title: Unit 5. Generative Models
   sections:
