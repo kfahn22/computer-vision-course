@@ -58,9 +58,9 @@
   sections:
     - sub-title: Introduction
       sections:
-        - local: Unit 4 - Multimodal Models/pre-intro
+        - local: Unit 4 - Multimodal Models/Introduction/pre-intro
           title: What you'll learn and what you'll build
-        - local: Unit 4 - Multimodal Models/introduction
+        - local: Unit 4 - Multimodal Models/Introduction/introduction
           title: Introduction
     - subtitle: Vision Language Models
       sections:
@@ -120,6 +120,8 @@
   sections:
     - local: Unit 6 - Basic CV Tasks/segmentation
       title: What is Image Segmentation?
+    - local: Unit 6 - Basic CV Tasks/object_detection
+      title: Object Detection
 
 - title: Unit 7. Video and Video Processing
   sections:
