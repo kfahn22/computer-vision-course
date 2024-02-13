@@ -133,7 +133,7 @@ class SwinTransformer(nn.Module):
     def forward_features(self, x):
         x = self.patch_embed(x)
         if self.ape:
-            x = x + self.absolute_pos_embedclass SwinTransformer(nn.Module)
+            x = x + self.absolute_pos_embed
         x = self.pos_drop(x)
 
         for layer in self.layers:
