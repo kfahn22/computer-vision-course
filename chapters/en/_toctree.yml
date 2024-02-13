@@ -119,6 +119,7 @@
 - title: Unit 6. Basic CV Tasks
   sections:
   - local: Unit 6 - Basic CV Tasks/segmentation
+    title: What is Image Segmentation? 
          
 - title: Unit 7. Video and Video Processing
   sections:
