@@ -133,13 +133,13 @@
   - sub-title: Introduction
     sections:
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Introduction/applications
-    - title: Applications of 3D Vision
+      title: Applications of 3D Vision
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Introduction/brief_history
-    -title: A Brief History of 3D Vision
+      title: A Brief History of 3D Vision
   - sub-title: Terminologies and Basics
     sections:
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/CameraModels
-    - title: Camera models
+      title: Camera models
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/LinearAlgebra
     - title: Basics of Linear Algebra for 3D Data
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/Representations
@@ -147,20 +147,20 @@
   - sub-title: 3D Vision
     sections: 
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/3D Vision/NVS
-    - title: Novel View Synthesis
+      title: Novel View Synthesis
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/3D Vision/3d_measurements_stereo_vision
-    - title: Introduction
+      title: Introduction
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/3D Vision/nerf
-    - title: Neural Radiance Fields (NeRFs)
+      title: Neural Radiance Fields (NeRFs)
     
 - title: Unit 9. Model Optimization
   sections:
   - local: Unit 9 - Model Optimization/intro_to_model_optimization
-  - title: Introduction to model optimization for deployment
+    title: Introduction to model optimization for deployment
   - local: Unit 9 - Model Optimization/model_deployment
-  - title: Model Deployment Considerations
+    title: Model Deployment Considerations
   - local: Unit 9 - Model Optimization/tools_and_frameworks
-  - title: Model optimization tools and frameworks
+    title: Model optimization tools and frameworks
 
 - title: Unit 10. Synthetic Data Creation
   sections:
@@ -182,7 +182,7 @@
 - title: Unit 11. Zero Shot Computer Vision
   sections: 
   - local: Unit 11  - Zero Shot Computer Vision/1
-  - title: Introduction
+    title: Introduction
 
 - title: Unit 12. Ethics and Bias
   sections:
@@ -200,10 +200,10 @@
 - title: Unit 13. Outlook
   sections:
   - local: Unit 13 - Outlook/hiera
-  - title: Overview
+    title: Overview
   - local: Unit 13 - Outlook/hyena
-  - title: Overview
+    title: Overview
   - local: Unit 13 - Outlook/i-jepa
-  - title: Image-based Joint-Embedding Predictive Architecture (I-JEPA)
+    title: Image-based Joint-Embedding Predictive Architecture (I-JEPA)
   - local: Unit 13 - Outlook/Retention - overview
-  - title: Retention In Vision
+    title: Retention In Vision
