@@ -141,9 +141,9 @@
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/CameraModels
       title: Camera models
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/LinearAlgebra
-    - title: Basics of Linear Algebra for 3D Data
+      title: Basics of Linear Algebra for 3D Data
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/Representations
-    - title: Representations for 3D Data
+      title: Representations for 3D Data
   - subtitle: 3D Vision
     sections: 
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/3D Vision/NVS
