@@ -5,7 +5,7 @@
 
 - title: Unit 1 - Fundamentals
   sections:
-    - sub-title: Chapter 1 - Fundamentals of Computer Vision
+    - subtitle: Chapter 1 - Fundamentals of Computer Vision
       sections:
         - local: Unit 1 - Fundamentals/Chapter 1 - Fundamentals of Computer Vision/motivation
           title: Vision
@@ -13,7 +13,7 @@
           title: What Is Computer Vision
         - local: Unit 1 - Fundamentals/Chapter 1 - Fundamentals of Computer Vision/applications
           title: Applications of Computer Vision
-    - sub-title: image_and_imaging
+    - subtitle: image_and_imaging
       sections:
         - local: Unit 1 - Fundamentals/image_and_imaging/image
           title: Image
@@ -23,7 +23,7 @@
           title: Imaging in Real-life
         - local: Unit 1 - Fundamentals/image_and_imaging/examples-preprocess
           title: Pre-processing for Computer Vision Tasks
-    - sub-title: feature-extraction
+    - subtitle: feature-extraction
       sections:
         - local: Unit 1 - Fundamentals/feature-extraction/feature_description
           title: Feature Description
@@ -62,7 +62,7 @@
       title: What you'll learn and what you'll build
     - local: Unit 4 - Multimodal Models/introduction
       title: Introduction
-  - sub-title: Vision Language Models
+  - subtitle: Vision Language Models
     sections:
     - local: Unit 4 - Multimodal Models/Vision Language Models/vlm-intro
       title: Introduction to Vision Language Models
@@ -70,7 +70,7 @@
       title: Multimodal Tasks and Models
     - local: Unit 4 - Multimodal Models/Vision Language Models/transfer_learning
       title: Transfer learning
-  - sub-title: CLIP and relatives
+  - subtitle: CLIP and relatives
     sections:
     - local: Unit 4 - Multimodal Models/CLIP and relatives/losses
       title: Losses
@@ -82,18 +82,18 @@
       title: Multimodal Text Generation (BLIP)
     - local: chapters/en/Unit 4 - Multimodal Models/CLIP and relatives/owl_vit
       title: Multimodal Object Detection (OWL-ViT)
-  - sub-title: Supplementary
+  - subtitle: Supplementary
     sections:
     - local: Unit 4 - Multimodal Models/Supplementary/supplementary-material
       title: Supplemental reading and resources
 
 - title: Unit 5. Generative Models
   sections:
-    - sub-title: Introduction
+    - subtitle: Introduction
       sections:
         - local: chapters/en/Unit 5 - Generative Models/Introduction/Introduction
           title: Introduction
-    - sub-title: Diffusion models
+    - subtitle: Diffusion models
       sections:
         - local: Unit 5 - Generative Models/Diffusion models/Introduction - Diffusions
           title: Introduction to Diffusion Models
@@ -101,7 +101,7 @@
           title: stable_diffusion
         - local: Unit 5 - Generative Models/Diffusion models/Simple explanation and showcase of external resources
           title: Extras
-    - sub-title: GANs & VAEs
+    - subtitle: GANs & VAEs
       sections:
         - local: Unit 5 - Generative Models/GANs & VAEs/gans
           title: Generative Adversarial Networks
@@ -109,7 +109,7 @@
           title: StyleGAN Variants
         - local: Unit 5 - Generative Models/GANs & VAEs/variational_autoencoders
           title: Variational Autoencoders
-    - sub-title: PRACTICAL APPLICATIONS & CHALLENGES
+    - subtitle: PRACTICAL APPLICATIONS & CHALLENGES
       sections:
         - local: Unit 5 - Generative Models/PRACTICAL APPLICATIONS & CHALLENGES/cycle_gan
           title: CycleGAN Introduction
@@ -130,13 +130,13 @@
 
 - title: Unit 8. 3D Vision, Scene Rendering and Reconstruction
   sections: 
-  - sub-title: Introduction
+  - subtitle: Introduction
     sections:
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Introduction/applications
       title: Applications of 3D Vision
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Introduction/brief_history
       title: A Brief History of 3D Vision
-  - sub-title: Terminologies and Basics
+  - subtitle: Terminologies and Basics
     sections:
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/CameraModels
       title: Camera models
@@ -144,7 +144,7 @@
     - title: Basics of Linear Algebra for 3D Data
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/Representations
     - title: Representations for 3D Data
-  - sub-title: 3D Vision
+  - subtitle: 3D Vision
     sections: 
     - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/3D Vision/NVS
       title: Novel View Synthesis
