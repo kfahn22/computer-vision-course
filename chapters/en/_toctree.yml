@@ -51,54 +51,54 @@
       title: Dilated Neighborhood Attention Transformer
     - local: Unit 3 - Vision Transformers/MobileVIT
       title: MobileViT v2
-    - local: chapters/en/Unit 3 - Vision Transformers/Swin Transformer
+    - local: Unit 3 - Vision Transformers/Swin Transformer
       title: Swin Transformer
 
 - title: Unit 4. Multimodal Models
   sections:
-  - sub-title: Introduction
-    sections:
-    - local: Unit 4 - Multimodal Models/pre-intro
-      title: What you'll learn and what you'll build
-    - local: Unit 4 - Multimodal Models/introduction
-      title: Introduction
-  - subtitle: Vision Language Models
-    sections:
-    - local: Unit 4 - Multimodal Models/Vision Language Models/vlm-intro
-      title: Introduction to Vision Language Models
-    - local: Unit 4 - Multimodal Models/Vision Language Models/tasks-models-part1
-      title: Multimodal Tasks and Models
-    - local: Unit 4 - Multimodal Models/Vision Language Models/transfer_learning
-      title: Transfer learning
-  - subtitle: CLIP and relatives
-    sections:
-    - local: Unit 4 - Multimodal Models/CLIP and relatives/losses
-      title: Losses
-    - local: Unit 4 - Multimodal Models/CLIP and relatives/Introduction
-      title: Introduction
-    - local: Unit 4 - Multimodal Models/CLIP and relatives/clip
-      title: Contrastive Language-Image Pre-training (CLIP)
-    - local: Unit 4 - Multimodal Models/CLIP and relatives/blip
-      title: Multimodal Text Generation (BLIP)
-    - local: chapters/en/Unit 4 - Multimodal Models/CLIP and relatives/owl_vit
-      title: Multimodal Object Detection (OWL-ViT)
-  - subtitle: Supplementary
-    sections:
-    - local: Unit 4 - Multimodal Models/Supplementary/supplementary-material
-      title: Supplemental reading and resources
+    - sub-title: Introduction
+      sections:
+        - local: Unit 4 - Multimodal Models/pre-intro
+          title: What you'll learn and what you'll build
+        - local: Unit 4 - Multimodal Models/introduction
+          title: Introduction
+    - subtitle: Vision Language Models
+      sections:
+        - local: Unit 4 - Multimodal Models/Vision Language Models/vlm-intro
+          title: Introduction to Vision Language Models
+        - local: Unit 4 - Multimodal Models/Vision Language Models/tasks-models-part1
+          title: Multimodal Tasks and Models
+        - local: Unit 4 - Multimodal Models/Vision Language Models/transfer_learning
+          title: Transfer learning
+    - subtitle: CLIP and relatives
+      sections:
+        - local: Unit 4 - Multimodal Models/CLIP and relatives/losses
+          title: Losses
+        - local: Unit 4 - Multimodal Models/CLIP and relatives/Introduction
+          title: Introduction
+        - local: Unit 4 - Multimodal Models/CLIP and relatives/clip
+          title: Contrastive Language-Image Pre-training (CLIP)
+        - local: Unit 4 - Multimodal Models/CLIP and relatives/blip
+          title: Multimodal Text Generation (BLIP)
+        - local: Unit 4 - Multimodal Models/CLIP and relatives/owl_vit
+          title: Multimodal Object Detection (OWL-ViT)
+    - subtitle: Supplementary
+      sections:
+        - local: Unit 4 - Multimodal Models/Supplementary/supplementary-material
+          title: Supplemental reading and resources
 
 - title: Unit 5. Generative Models
   sections:
     - subtitle: Introduction
       sections:
-        - local: chapters/en/Unit 5 - Generative Models/Introduction/Introduction
+        - local: Unit 5 - Generative Models/Introduction/Introduction
           title: Introduction
     - subtitle: Diffusion models
       sections:
         - local: Unit 5 - Generative Models/Diffusion models/Introduction - Diffusions
           title: Introduction to Diffusion Models
-        - local: Unit 5 - Generative Models/Diffusion models
-          title: stable_diffusion
+        - local: Unit 5 - Generative Models/Diffusion models/stable_diffusion
+          title: Introduction to Stable Diffusion
         - local: Unit 5 - Generative Models/Diffusion models/Simple explanation and showcase of external resources
           title: Extras
     - subtitle: GANs & VAEs
@@ -118,49 +118,49 @@
 
 - title: Unit 6. Basic CV Tasks
   sections:
-  - local: Unit 6 - Basic CV Tasks/segmentation
-    title: What is Image Segmentation? 
-         
+    - local: Unit 6 - Basic CV Tasks/segmentation
+      title: What is Image Segmentation?
+
 - title: Unit 7. Video and Video Processing
   sections:
-  - local: Unit 7 - Video and Video Processing/introduction-to-video
-    title: Introduction
-  - local: Unit 7 - Video and Video Processing/video-processing-basics
-    title: Video Processing Basics
+    - local: Unit 7 - Video and Video Processing/introduction-to-video
+      title: Introduction
+    - local: Unit 7 - Video and Video Processing/video-processing-basics
+      title: Video Processing Basics
 
 - title: Unit 8. 3D Vision, Scene Rendering and Reconstruction
-  sections: 
-  - subtitle: Introduction
-    sections:
-    - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Introduction/applications
-      title: Applications of 3D Vision
-    - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Introduction/brief_history
-      title: A Brief History of 3D Vision
-  - subtitle: Terminologies and Basics
-    sections:
-    - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/CameraModels
-      title: Camera models
-    - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/LinearAlgebra
-      title: Basics of Linear Algebra for 3D Data
-    - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/Representations
-      title: Representations for 3D Data
-  - subtitle: 3D Vision
-    sections: 
-    - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/3D Vision/NVS
-      title: Novel View Synthesis
-    - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/3D Vision/3d_measurements_stereo_vision
-      title: Introduction
-    - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/3D Vision/nerf
-      title: Neural Radiance Fields (NeRFs)
-    
+  sections:
+    - subtitle: Introduction
+      sections:
+        - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Introduction/applications
+          title: Applications of 3D Vision
+        - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Introduction/brief_history
+          title: A Brief History of 3D Vision
+    - subtitle: Terminologies and Basics
+      sections:
+        - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/CameraModels
+          title: Camera models
+        - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/LinearAlgebra
+          title: Basics of Linear Algebra for 3D Data
+        - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/Terminologies and Basics/Representations
+          title: Representations for 3D Data
+    - subtitle: 3D Vision
+      sections:
+        - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/3D Vision/NVS
+          title: Novel View Synthesis
+        - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/3D Vision/3d_measurements_stereo_vision
+          title: Introduction
+        - local: Unit 8 - 3D Vision, Scene Rendering and Reconstruction/3D Vision/nerf
+          title: Neural Radiance Fields (NeRFs)
+
 - title: Unit 9. Model Optimization
   sections:
-  - local: Unit 9 - Model Optimization/intro_to_model_optimization
-    title: Introduction to model optimization for deployment
-  - local: Unit 9 - Model Optimization/model_deployment
-    title: Model Deployment Considerations
-  - local: Unit 9 - Model Optimization/tools_and_frameworks
-    title: Model optimization tools and frameworks
+    - local: Unit 9 - Model Optimization/intro_to_model_optimization
+      title: Introduction to model optimization for deployment
+    - local: Unit 9 - Model Optimization/model_deployment
+      title: Model Deployment Considerations
+    - local: Unit 9 - Model Optimization/tools_and_frameworks
+      title: Model optimization tools and frameworks
 
 - title: Unit 10. Synthetic Data Creation
   sections:
@@ -180,9 +180,9 @@
       title: Synthetic Datasets
 
 - title: Unit 11. Zero Shot Computer Vision
-  sections: 
-  - local: Unit 11  - Zero Shot Computer Vision/1
-    title: Introduction
+  sections:
+    - local: Unit 11  - Zero Shot Computer Vision/1
+      title: Introduction
 
 - title: Unit 12. Ethics and Bias
   sections:
@@ -199,11 +199,11 @@
 
 - title: Unit 13. Outlook
   sections:
-  - local: Unit 13 - Outlook/hiera
-    title: Overview
-  - local: Unit 13 - Outlook/hyena
-    title: Overview
-  - local: Unit 13 - Outlook/i-jepa
-    title: Image-based Joint-Embedding Predictive Architecture (I-JEPA)
-  - local: Unit 13 - Outlook/Retention - overview
-    title: Retention In Vision
+    - local: Unit 13 - Outlook/hiera
+      title: Overview
+    - local: Unit 13 - Outlook/hyena
+      title: Overview
+    - local: Unit 13 - Outlook/i-jepa
+      title: Image-based Joint-Embedding Predictive Architecture (I-JEPA)
+    - local: Unit 13 - Outlook/Retention - overview
+      title: Retention In Vision
