@@ -1,50 +1,57 @@
 # Convolutional Vision Transformer (CvT)
+
 In this section, we will be doing a deep dive into Convolutional Vision Transformer (CvT) which is a variant of Vision Transformer (ViT)[[1]](#vision-transformer) and extensively used for the Image Classification task in Computer Vision.
 
 ## Recap
+
 Before going into CvT, let's have a small recap on ViT architecture covered in the previous sections to better appreciate the CvT architecture. ViT decomposes each image into a sequence of tokens (i.e. non-overlapping patches) with a fixed length and then applies multiple standard Transformer layers, consisting of Multi-head Self Attention and Position-wise Feed-forward module (FFN) to model global relations for classification.
 
 ## Overview
-Convolutional Vision Transformer (CvT) model was proposed in CvT: Introducing Convolutions to Vision Transformers [[2]](#cvt) by Haiping Wu, Bin Xiao, Noel Codella, Mengchen Liu, Xiyang Dai, Lu Yuan and Lei Zhang. CvT employs all the benefits of CNNs: *local receptive fields*, *shared weights*, and *spatial subsampling* along with *shift*, *scale*, *distortion invariance* while keeping merits of Transformers: *dynamic attention*, *global context fusion*, and *better generalization*. CvT achieves superior performance while maintaining computational efficiency compared to ViT. Furthermore, due to built-in local context structure introduced by convolutions, CvT no longer requires a position embedding, giving it a potential advantage for adaption to a wide range of vision tasks requiring variable input resolution.
+
+Convolutional Vision Transformer (CvT) model was proposed in CvT: Introducing Convolutions to Vision Transformers [[2]](#cvt) by Haiping Wu, Bin Xiao, Noel Codella, Mengchen Liu, Xiyang Dai, Lu Yuan and Lei Zhang. CvT employs all the benefits of CNNs: _local receptive fields_, _shared weights_, and _spatial subsampling_ along with _shift_, _scale_, _distortion invariance_ while keeping merits of Transformers: _dynamic attention_, _global context fusion_, and _better generalization_. CvT achieves superior performance while maintaining computational efficiency compared to ViT. Furthermore, due to built-in local context structure introduced by convolutions, CvT no longer requires a position embedding, giving it a potential advantage for adaption to a wide range of vision tasks requiring variable input resolution.
 
 ## Architecture
 
 ![CvT Architecture](https://huggingface.co/datasets/hf-vision/course-assets/resolve/main/cvt_architecture.png)
-*(a) Overall architecture, showing the hierarchical multi-stage structure facilitated by the Convolutional Token Embedding layer. (b) Details of the Convolutional Transformer Block, which contains the convolutional projection as the first layer. [[2]](#cvt)*
+_(a) Overall architecture, showing the hierarchical multi-stage structure facilitated by the Convolutional Token Embedding layer. (b) Details of the Convolutional Transformer Block, which contains the convolutional projection as the first layer. [[2]](#cvt)_
 
 The above image of CvT architecture illustrates the main steps of 3-stage pipeline. At its core, CvT blends two convolution-based operations into the Vision Transformer architecture:
 
 - **Convolutional Token Embedding**: Imagine splitting the input image into overlapping patches, reshaping them into tokens, and then feeding them to a convolution layer. This reduces the number of tokens (like pixels in a downsampled image) while boosting their feature richness, similar to traditional CNNs. Unlike other Transformers, we skip adding pre-defined position information to the tokens, relying solely on convolutional operations to capture spatial relationships.
 
 ![Projection Layer](https://huggingface.co/datasets/hf-vision/course-assets/resolve/main/cvt_conv_proj.png)
-*(a) Linear Projection in ViT. (b) Convolutional Projection. (c) Squeezed Convolutional Projection (Default in CvT). [[2]](#cvt)*
+_(a) Linear Projection in ViT. (b) Convolutional Projection. (c) Squeezed Convolutional Projection (Default in CvT). [[2]](#cvt)_
 
 - **Convolutional Transformer Blocks**: Each stage in CvT contains a stack of these blocks. Here, instead of the usual linear projections in ViT, we use depth-wise separable convolutions (Convolutional Projection) to process the "query," "key," and "value" components of the self-attention module as shown in the above image. This maintains the benefits of Transformers while improving efficiency. Note that the "classification token" (used for final prediction) is only added in the last stage. Finally, a standard fully-connected layer analyzes the final classification token to predict the image class.
 
+### Comparision of CvT Architecture with other Vision Transformers
 
-### Comparision of CvT Architecture with other Vision Transformers 
 The below table shows the key differences in terms of the necessity of positional encodings, type of token embedding, type of projection, and Transformer structure in the backbone, between the above representative concurrent works and CvT.
 
-| Model | Needs Position Encoding (PE) | Token Embedding | Projection for Attention | Hierarchical Transformers |
-| ------| -----------------------------| ----------------| -------------------------| --------------------------|
-| ViT[[1]](#vision-transformer), DeiT [[3]](#deit) | Yes | Non-overlapping | Linear| No|
-| CPVT[[4]](#cpvt) | No (w/PE Generator) | Non-Overlapping | Linear | No|
-| TNT[[5]](#tnt) | Yes | Non-overlapping (Patch + Pixel) | Linear | No|
-| T2T[[6]](#t2t) | Yes | Overlapping (Concatenate)| Linear | Partial (Tokenization) |
-| PVT[[7]](#pvt) | Yes | Non-overlapping | Spatial Reduction | Yes |
-|*CvT*[[2]](#cvt)| *No* | *Overlapping (Convolution)* | *Convolution* | *Yes*|
+| Model                                            | Needs Position Encoding (PE) | Token Embedding                 | Projection for Attention | Hierarchical Transformers |
+| ------------------------------------------------ | ---------------------------- | ------------------------------- | ------------------------ | ------------------------- |
+| ViT[[1]](#vision-transformer), DeiT [[3]](#deit) | Yes                          | Non-overlapping                 | Linear                   | No                        |
+| CPVT[[4]](#cpvt)                                 | No (w/PE Generator)          | Non-Overlapping                 | Linear                   | No                        |
+| TNT[[5]](#tnt)                                   | Yes                          | Non-overlapping (Patch + Pixel) | Linear                   | No                        |
+| T2T[[6]](#t2t)                                   | Yes                          | Overlapping (Concatenate)       | Linear                   | Partial (Tokenization)    |
+| PVT[[7]](#pvt)                                   | Yes                          | Non-overlapping                 | Spatial Reduction        | Yes                       |
+| _CvT_[[2]](#cvt)                                 | _No_                         | _Overlapping (Convolution)_     | _Convolution_            | _Yes_                     |
 
 ### Main Highlights
+
 The four main highlights of CvT that helped achieve superior performance and computational efficiency are the following:
+
 - **Hierarchy of Transformers** containing a new **Convolutional token embedding**.
 - Convolutional Transformer block leveraging a **Convolutional Projection**.
 - **Removal of Positional Encoding** due to built-in local context structure introduced by convolutions.
 - Fewer **Parameters** and lower **FLOPs** (Floating Point Operations per second) compared to other vision transformer architectures.
 
 ## PyTorch Implementation
+
 Time to get hands-on! Let's explore how to code each major blocks of the CvT architecture in PyTorch shown in the official implementation [[8]](#cvt-imp).
 
 1. Importing required libraries
+
 ```python
 from collections import OrderedDict
 import torch
@@ -53,6 +60,7 @@ import torch.nn.functional as F
 from einops import rearrange
 from einops.layers.torch import Rearrange
 ```
+
 2. Implementation of **Convolutional Projection**.
 
 ```python
@@ -102,6 +110,7 @@ def _build_projection(self, dim_in, dim_out, kernel_size, padding, stride, metho
 
     return proj
 ```
+
 The method takes several parameters related to a convolutional layer (such as input and output dimensions, kernel size, padding, stride, and method) and returns a projection block based on the specified method.
 
 - If the method is `dw_bn` (depthwise separable with batch normalization), it creates a Sequential block consisting of a depthwise separable convolutional layer followed by batch normalization and rearranges the dimensions.
@@ -113,6 +122,7 @@ The method takes several parameters related to a convolutional layer (such as in
 The rearrangement of dimensions is performed using the `Rearrange` operation, which reshapes the input tensor. The resulting projection block is then returned.
 
 3. Implementation of **Convolutional Token Embedding**
+
 ```python
 class ConvEmbed(nn.Module):
     def __init__(
@@ -137,7 +147,7 @@ class ConvEmbed(nn.Module):
         x = rearrange(x, "b (h w) c -> b c h w", h=H, w=W)
 
         return x
-``` 
+```
 
 This code defines a ConvEmbed module that performs patch-wise embedding on an input image.
 
@@ -152,6 +162,7 @@ This code defines a ConvEmbed module that performs patch-wise embedding on an in
 In summary, this module is designed for patch-wise embedding of images, where each patch is processed independently through a convolutional layer, and optional normalization is applied to the embedded features.
 
 4. Implementation of **Vision Transformer** Block
+
 ```python
 class VisionTransformer(nn.Module):
     """Vision Transformer with support for patch or hybrid CNN input stage"""
@@ -249,6 +260,7 @@ class VisionTransformer(nn.Module):
 
             return x, cls_tokens
 ```
+
 This code defines a Vision Transformer module. Here's a brief overview of the code:
 
 - **Initialization:** The `VisionTransformer` class is initialized with various parameters that define the model architecture, such as patch size, embedding dimensions, number of layers, number of attention heads, dropout rates, etc.
@@ -266,6 +278,7 @@ This code defines a Vision Transformer module. Here's a brief overview of the co
 - **Forward Method:** The forward method processes the input through the patch embedding, rearranges the dimensions, adds the classification token if present, applies dropout, and then passes the data through the stack of transformer blocks. Finally, the output is rearranged back to the original shape, and the classification token (if present) is separated from the rest of the sequence before returning the output.
 
 5. Implementation of Convolutional Vision Transformer Block (**Hierarchy of Transformers**)
+
 ```python
 class ConvolutionalVisionTransformer(nn.Module):
     def __init__(
@@ -344,6 +357,7 @@ class ConvolutionalVisionTransformer(nn.Module):
 
         return x
 ```
+
 This code defines a PyTorch module called `ConvolutionalVisionTransformer`.
 
 - The model consists of multiple stages, each represented by an instance of the `VisionTransformer` class.
@@ -356,7 +370,9 @@ This code defines a PyTorch module called `ConvolutionalVisionTransformer`.
 Congratulations! Now you know how to implement CvT architecture in PyTorch. You can view complete code of the CvT architecture [here](https://github.com/microsoft/CvT/blob/main/lib/models/cls_cvt.py).
 
 ## Try it out
+
 If you're looking to use CvT without getting into the complex details of its PyTorch implementation, you can easily do so by leveraging the Hugging Face `transformers` library. Here's how:
+
 ```bash
 pip install transformers
 ```
@@ -364,6 +380,7 @@ pip install transformers
 You can find the documentation for CvT model [here](https://huggingface.co/docs/transformers/model_doc/cvt#overview).
 
 ### Usage
+
 Here is how to use CvT model to classify an image of the COCO 2017 dataset into one of the 1,000 ImageNet classes:
 
 ```python
@@ -386,6 +403,7 @@ print("Predicted class:", model.config.id2label[predicted_class_idx])
 ```
 
 ## References
+
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929) <a id="vision-transformer"></a>
 - [CvT: Introducing Convolutions to Vision Transformers](https://arxiv.org/abs/2103.15808) <a id="cvt"></a>
 - [Training data-efficient image transformers & distillation through attention](https://arxiv.org/abs/2012.12877) <a id="deit"></a>

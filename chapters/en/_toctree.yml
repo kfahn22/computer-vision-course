@@ -185,24 +185,13 @@
 
 - title: Unit 12. Ethics and Bias
   sections:
-    - local: Unit 12 - Ethics and Biases/pre-intro
-      title: What you'll learn
-    - local: Unit 12 - Ethics and Biases/introduction
-      title: Introduction
-    - local: Unit 12 - Ethics and Biases/ethics-bias-ai
-      title: Ethics and Bias in AI
-    - local: Unit 12 - Ethics and Biases/conclusion
-      title: Hugging Face's efforts - Ethics and Society
-    - local: Unit 12 - Ethics and Biases/supplementary-material
-      title: Supplementary reading and resources
-
-- title: Unit 13. Outlook
-  sections:
-    - local: Unit 13 - Outlook/hiera
-      title: Overview
-    - local: Unit 13 - Outlook/hyena
-      title: Overview
-    - local: Unit 13 - Outlook/i-jepa
-      title: Image-based Joint-Embedding Predictive Architecture (I-JEPA)
-    - local: Unit 13 - Outlook/Retention - overview
-      title: Retention In Vision
+  - local: Unit 12 - Ethics and Biases/pre-intro
+    title: What you'll learn
+  - local: Unit 12 - Ethics and Biases/introduction
+    title: Introduction
+  - local: Unit 12 - Ethics and Biases/ethics-bias-ai
+    title: Ethics and Bias in AI 
+  - local: Unit 12 - Ethics and Biases/conclusion
+    title: Hugging Face's efforts - Ethics and Society
+  - local: Unit 12 - Ethics and Biases/supplementary-material
+    title: Supplementary reading and resources
