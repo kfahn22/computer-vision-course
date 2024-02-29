@@ -19,8 +19,7 @@ $$L = \mathbb{1}[y_i = y_j]||x_i - x_j||^2 + \mathbb{1}[y_i \neq y_j]max(0, \eps
 
 Explaining in simple terms:
 
-- If the samples are similar ($$y_i = y_j$$), then we minimize the term $$||x_i - x_j||^2$$ that corresponds to their Euclidean distance, i.e., we want to make them closer;
-- If the samples are dissimilar ($$y_i \neq y_j$$), then we minimize the term $$max(0, \epsilon - ||x_i - x_j||^2)$$ that is equivalent to maximizing their euclidean distance until some limit $\epsilon$, i.e., we want to make them distant from each other.
+If the samples are similar ($$y_i = y_j$$), then we minimize the term $$||x_i - x_j||^2$$ that corresponds to their Euclidean distance, i.e., we want to make them closer.  If the samples are dissimilar ($$y_i \neq y_j$$), then we minimize the term $$max(0, \epsilon - ||x_i - x_j||^2)$$ that is equivalent to maximizing their euclidean distance until some limit $$\epsilon$$, i.e., we want to make them distant from each other.
 
 ## References
 
